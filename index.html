@@ -11,10 +11,9 @@
 </body>
     <script>
         var xmlObj =$.ajax({
-             url: 'https://accounts.zoho.com/oauth/v2/auth?client_id=1000.Z79HLWOYV41SMC7Q2EWZOCRPE7SEAY&response_type=token&
-                scope=ZohoCreator.report.READ&
-                redirect_uri=https://github.com/',
-                type: "GET"
+             url: 'https://creator.zoho.com/api/v2.1/user6_demo11/order-management-for-stitching/report/All_Orders',
+                type: "GET",
+                headers:{"Authorization":"Zoho-oauthtoken 1000.609e3f71080cd2bf24c3089bd071cd5e.2b3725a82f3ae2bf0a6ed98847c363e6"},
         });
         console.log(xmlObj);
         xmlObj.then(function(){
