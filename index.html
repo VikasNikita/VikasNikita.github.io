@@ -13,9 +13,11 @@
         var xmlObj =$.ajax({
                 type: "GET",
             headers:{'Authorization':'Zoho-oauthtoken 1000.37603b9e74abc0d6cffe687cf2bfe1de.2db852c63f22d47e8cce4d0b259b320f',
-                         'Content-Type':'application/json'
+                         'Content-Type':'application/json',
+                         'Access-Control-Allow-Origin':"*"
                     },
                 url: 'https://creator.zoho.com/api/v2.1/user6_demo11/order-management-for-stitching/report/All_Orders',
+                
 
         });
         console.log(xmlObj);
