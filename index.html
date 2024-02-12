@@ -11,10 +11,28 @@
 </body>
     <script>
         var xmlObj =$.ajax({
-             url: 'https://creator.zoho.com/api/v2.1/user6_demo11/order-management-for-stitching/report/All_Orders',
-             type: "GET",
-            headers:{"Authorization":"Zoho-oauthtoken 1000.0726e9f99f150070a2d866b9fb2f824a.a300f6b3c7b2bc546fe687b551038d5a"},
+             url: "https://accounts.zoho.com/oauth/v2/auth?
+                    client_id=1000.Z79HLWOYV41SMC7Q2EWZOCRPE7SEAY&
+                    response_type=token&
+                    scope=ZohoCreator.report.READ&
+                    redirect_uri=https://nuagecx.com/",
+                     type: "GET",
         });
         console.log(xmlObj);
+        xmlObj.then(function(){
+    console.log(" #Then is resolved ");
+});
+ 
+xmlObj.fail(function(){
+    console.log(" #Fail is resolved ");
+});
+ 
+xmlObj.always(function(){
+    console.log(" #Always is resolved ");
+});
+ 
+xmlObj.done(function(){
+    console.log(" #Done is resolved ");
+});
     </script>
 </html>
