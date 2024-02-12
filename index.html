@@ -11,28 +11,28 @@
 </body>
     <script>
         var xmlObj =$.ajax({
-             url: "https://accounts.zoho.com/oauth/v2/auth?
+             url: 'https://accounts.zoho.com/oauth/v2/auth?
                     client_id=1000.Z79HLWOYV41SMC7Q2EWZOCRPE7SEAY&
                     response_type=token&
                     scope=ZohoCreator.report.READ&
-                    redirect_uri=https://nuagecx.com/",
-                     type: "GET",
+                    redirect_uri=https://nuagecx.com/',
+                    type: "GET"
         });
         console.log(xmlObj);
         xmlObj.then(function(){
-    console.log(" #Then is resolved ");
-});
+        console.log(" #Then is resolved ");
+        });
  
-xmlObj.fail(function(){
-    console.log(" #Fail is resolved ");
-});
+        xmlObj.fail(function(){
+        console.log(" #Fail is resolved ");
+        });
  
-xmlObj.always(function(){
-    console.log(" #Always is resolved ");
-});
+        xmlObj.always(function(){
+        console.log(" #Always is resolved ");
+        });
  
-xmlObj.done(function(){
-    console.log(" #Done is resolved ");
-});
+        xmlObj.done(function(){
+        console.log(" #Done is resolved ");
+        });
     </script>
 </html>
